@@ -40,15 +40,16 @@ export default class FilterObject extends Component {
         filteredEmployees.push(employees[i]);       
       }
     }
+    this.setState({filteredEmployees: filteredEmployees});
   }
 
   render() {
     return (
-      <div className='puzzlebox filterObjectPB'>
+      <div className='puzzleBox filterObjectPB'>
       <h4>Filter Object</h4>
       <span className='puzzleText'> Original: {JSON.stringify(this.state.employees, null, 10)} </span>
       <input className='inputLine' onChange={(e) => this.handleChange(e.target.value)} />
-      <button className='confirmationButton' onChange={() => this.filteredEmployees(this.state.userInput)}>Filter</button>
+      <button className='confirmationButton' onClick={() => this.filteredEmployees(this.state.userInput)}>Filter</button>
       <span className='resultsBox filterObjectRB'> Filtered: {JSON.stringify(this.state.filteredEmployees, null, 10)} </span>
       </div>
     )
