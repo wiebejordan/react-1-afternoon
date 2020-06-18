@@ -6,7 +6,7 @@ export default class FilterString extends Component {
     super();
 
     this.state = {
-      names: ['Jordo', 'Tyler', 'Dave', 'Cicely', 'Fred', 'F.R.E.D.', 'Ellie', 'Steve'],
+      names: ['jordo', 'tyler', 'dave', 'cicely', 'fred', 'f.r.e.d.', 'ellie', 'steve'],
       userInput: '',
       filteredNames: []
     };
